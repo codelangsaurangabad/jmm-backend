@@ -5,6 +5,7 @@ const categoryRoutes = require('./routes/categoryRoutes');
 const subcategoryRoutes = require('./routes/subcategoryRoutes');
 const businessRoutes = require('./routes/businessRoutes');
 const userRoutes = require('./routes/userRoutes'); // Import user routes
+const roleRoutes = require('./routes/roleRoutes'); // Import user routes
 const cors = require('cors');
 const path = require('path');
 require('dotenv').config();
@@ -25,6 +26,7 @@ app.use('/api/categories', categoryRoutes);
 app.use('/api/subcategories', subcategoryRoutes);
 app.use('/api/businesses', businessRoutes);
 app.use('/api/users', userRoutes); // Add user routes
+app.use('/api/roles', roleRoutes); // Add role routes
 
 // Connect to DB and start server
 connectDB().then(() => {
